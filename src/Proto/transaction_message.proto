@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "Payment";
+
+package Transaction;
+
+service InitiateTransaction {
+    rpc Create(TransactionMessage) returns (TransactionResponse);
+}
+
+message TransactionMessage {
+    string transaction_id = 1;
+    double amount = 2;
+    google.protobuf.Timestamp transaction_date = 3;
+    string description = 4;
+    int32 merchant_id = 5;
+}
+
+message TransactionResponse {
+    int32 track_id = 1;
+    string transaction_id = 2;
+    bool checked = 3;
+    bool auth = 4;
+    double fee = 5;
+}
