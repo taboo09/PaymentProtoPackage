@@ -3,11 +3,16 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
+    <Version>0.0.1</Version>
+    <PackageId>PaymentProto</PackageId>
+    <Authors>Marius Stanciu</Authors>
+    <Company>Taboo09</Company>
+    <PackageDescription>PaymentProto Package</PackageDescription>
+    <RepositoryUrl>https://github.com/taboo09/FizzBuzzPackage</RepositoryUrl>
   </PropertyGroup>
 
 
   <ItemGroup>
-    <!-- <Protobuf Include="../**/*.proto" GrpcServices="Server" /> -->
     <Protobuf Include="../**/*.proto" GrpcServices="Server" />
   </ItemGroup>
 
