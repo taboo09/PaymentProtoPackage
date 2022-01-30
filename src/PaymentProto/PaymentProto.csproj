@@ -8,7 +8,7 @@
     <Authors>Marius Stanciu</Authors>
     <Company>Taboo09</Company>
     <PackageDescription>PaymentProto Server Package</PackageDescription>
-    <RepositoryUrl>https://github.com/taboo09/PaymentProtoServerPackage</RepositoryUrl>
+    <RepositoryUrl>https://github.com/taboo09/PaymentProtoPackage</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
