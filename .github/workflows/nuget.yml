@@ -20,12 +20,14 @@ jobs:
         dotnet-version: ${{ env.DOTNET_VERSION }}
     - name: Install dependencies Server package
       run: dotnet restore src/PaymentProto
-    - name: Build Server package
-      run: dotnet build src/PaymentProto --configuration Release --no-restore
     - name: Install dependencies Client package
       run: dotnet restore src/PaymentProtoClient
+
+    - name: Build Server package
+      run: dotnet build src/PaymentProto --configuration Release --no-restore
     - name: Build Client package
       run: dotnet build src/PaymentProtoClient --configuration Release --no-restore
+      
     - name: Pack the Server project
       run: dotnet pack src/PaymentProto --configuration Release --output .
     - name: Pack the Client project
