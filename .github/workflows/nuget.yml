@@ -26,8 +26,9 @@ jobs:
       run: dotnet restore src/PaymentProtoClient
     - name: Build Client package
       run: dotnet build src/PaymentProtoClient --configuration Release --no-restore
-    - name: Pack the projects
+    - name: Pack the Server project
       run: dotnet pack src/PaymentProto --configuration Release --output .
+    - name: Pack the Client project
       run: dotnet pack src/PaymentProtoCLient --configuration Release --output .
     - name: Publish the package to GitHub Packages
       run: dotnet nuget push PaymentProto.*.nupkg -s https://nuget.pkg.github.com/taboo09/index.json -k ${{secrets.GITHUB_TOKEN}} --skip-duplicate
