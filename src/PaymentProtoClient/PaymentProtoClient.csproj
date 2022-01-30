@@ -4,15 +4,15 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
     <Version>0.0.2</Version>
-    <PackageId>PaymentProtoServer</PackageId>
+    <PackageId>PaymentProtoClient</PackageId>
     <Authors>Marius Stanciu</Authors>
     <Company>Taboo09</Company>
-    <PackageDescription>PaymentProto Server Package</PackageDescription>
-    <RepositoryUrl>https://github.com/taboo09/PaymentProtoServerPackage</RepositoryUrl>
+    <PackageDescription>PaymentProto Client Package</PackageDescription>
+    <RepositoryUrl>https://github.com/taboo09/PaymentProtoClientPackage</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <Protobuf Include="../**/*.proto" GrpcServices="Server" />
+    <Protobuf Include="../**/*.proto" GrpcServices="Client" />
   </ItemGroup>
 
   <ItemGroup>
